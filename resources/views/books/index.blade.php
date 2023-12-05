@@ -11,6 +11,8 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <x-primary-button tag="a" href="{{route('book.create')}}">Tambah Data Buku</x-primary-button>
                     <x-primary-button tag="a" href="{{ route('book.print')}}">Cetak Buku</x-primary-button>
+                    <x-primary-button tag="a" href="{{ route('book.export')}}">Export Excel</x-primary-button>
+                    <x-primary-button x-data="" x-on:click.prevent="$dispatch('open-modal', 'import-book')">{{ __('Import Excel') }}</x-primary-button>
                     <br/><br/>
                     <x-table>
                         <x-slot name="header">
